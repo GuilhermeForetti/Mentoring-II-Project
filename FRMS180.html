@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+			<meta name= "viewport" content ="width=device-width, initial-scale=1.0">
+			<meta charset="UTF8">
+		    <title>FRMS180
+			</title>
+
+			<style>
+				.cabecalho{
+					background-color:yellow;
+				}
+				.titulo{
+					margin: 0 auto;
+					width: 30%;
+					text-align: center;
+					font-size: 60px;
+					font-family: Jazz LET, fantasy;
+					padding-top: 10px;
+					padding-bottom: 20px;
+
+
+				}
+
+				.programa{
+					margin-top:5px;
+					border-style:solid;
+					display: inline-block;
+					padding: 10px;
+					color: yellow;
+					font-family: helvetica;
+					text-align: center;
+					width: 100%;
+				}
+				.formulas{
+					margin-top:5px;
+					border-style:solid;
+					display: inline-block;
+					padding: 0px;
+					color: yellow;
+					font-family: helvetica;
+					text-align: center;
+					width: 100%;
+				}
+				.formulas:hover{
+						background-color: black;
+						color: white;
+				}
+				
+
+
+			</style>
+			<script>
+		var qtd=0;
+		function adiciona(){
+			qtd++;
+			var d = document.getElementById("caixas");
+			var i1 = document.createElement("input");
+			i1.setAttribute("id", "valor"+qtd);
+			d.appendChild(i1);
+			alert("Você adicionou uma força!");
+		}
+		function somaTodos(){
+			var i;
+			var sub=0;
+			for(i=1;i<=qtd;i++){
+				sub=sub-parseInt(document.getElementById("valor"+i).value);
+			}
+			alert(sub);
+		}
+	</script>
+	</head>
+  <body>
+		<body bgcolor="black">
+		<div class="cabecalho">
+			<div class="titulo">
+				Força resultante 180º
+			</div>
+		</div>
+		<div class="programa">
+			<h1>Força resultante na mesma direção ou sentidos contrários 180º</h1>
+			
+		</div>
+		<div class="formulas">
+			 <div><h2>FORÇA1 - FORÇA 2= FORÇA RESULTANTE</h2>
+			
+			 <div>
+	<button onclick="adiciona()">Adicionar força</button>
+	<br>
+	<br>
+	<br>
+	<div  id="caixas">
+	
+	</div>
+	<button onclick="somaTodos()">Resultado</button>
+	<br>
+			 </div>
+			 <br>
+			 <br> <h4><a href="FISICA.html" >VOLTAR Á PAGINA INICIAL</a><h4>
+		</div>
+		<div class="rodape">
+		   <a href="https://www.pucminas.br/main/Paginas/default.aspx"><img class="rodape" src = "pucminas.jpg"  width="200" height="150"></a>
+		   <a href="http://cepoc.com.br/"><img class="rodape" src = "cepoc.jpg.png"  width="200" height="100"></a>
+		</div> 
+		
+	</body>
+
+</html>
